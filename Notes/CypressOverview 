@@ -1,0 +1,81 @@
+CYPRESS OVERVIEW :
+
+
+WebTesting / Api Testing
+
+Modern WebApplication (Angular JS and React JS)
+It uses Javascript
+No relation between selenium and cypress
+
+Open Source :
+
+Test-runner : Free
+Dashboard - paid
+
+Node.js and come with npm module
+
+Who can use cypress : Dev && QA
+End-to -End test case
+Integration tests
+Unit test
+
+
+Selenium vs Cypress
+Selenium :
+> only web
+> free
+> Java, python, ruby, js, c#
+> chrome, ff, safari, ie, opera, edge
+> runs outside of the browser
+> integrate with extent and allure report
+
+Cypress:
+> web / api
+> Test-runner : Free/Dashboard - paid
+> js/ts
+> chrome, electron, firefox
+> runs inside the browser
+> mocha reporter, allure
+
+Features :
+> debugging
+> build in waits (automatic waits)
+> video/ screenshots
+> cross browser testing
+
+Limitations
+> cannot automation window application/ mobile apps
+> js/ts
+> limit reporting tools
+
+
+
+Steps :
+
+1. Download Node & NPM  https://nodejs.org/en/download
+2. Create Cypress working folder
+3. Generate package.json -> npm init
+4. Install Cypress -> npm install Cypress
+5.  Download Visual Study code editor
+6. Start Cypress - npx cypress open
+
+
+Running Tests/Specs
+
+—————————————
+To open cypress runner
+ npx cypress open
+
+To run all the specs under e2e folder
+  npx cypress run
+  npx cypress run —headed
+
+To run single spec under e2e folder
+npx cypress run  -specs "./cypress/e2e/MyFirstTest.cy.js"
+
+Change browser
+npx cypress run —browser chrome
+
+
+
+

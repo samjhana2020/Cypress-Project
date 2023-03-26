@@ -1,0 +1,14 @@
+{
+  "name": "cypress_batch_08",
+  "version": "1.0.0",
+  "description": "This is a cypress class ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brijesh",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.8.1"
+  }
+}
