@@ -12,6 +12,8 @@ describe('My first Test Suite',()=>{
         cy.get('[name="password"]').type('admin123')
         cy.get('[type="submit"]').click()
 
+        cy.contains('Admin').click()
+
          })
 
 
