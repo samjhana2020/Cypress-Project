@@ -30,12 +30,64 @@ describe('Assertion',()=>{
 
     })
 
-    it.only(' Assertion example 2 ',()=>{
+    it(' Assertion example 2 ',()=>{
         cy.visit('https://itera-qa.azurewebsites.net/home/automation')
         cy.get('[type="checkbox"][class="form-check-input"]').first().check()
             .should('be.checked')
         cy.get('[type="checkbox"][class="form-check-input"]').last()
             .should('not.be.checked')
+    })
+
+    it(' Explict Assertion - example 3 ',()=>{
+        cy.fixture('example').then((obj)=>{
+            expect(obj).to.deep.equal({
+                    "name": "Using fixtures to represent data",
+                    "email": "hello@cypress.io",
+                    "body": "Fixtures are a great way to mock data for responses to routes"
+                })
+
+            expect({
+                "name": "Using fixtures to represent dat",
+                "email": "hello@cypress.io",
+                "body": "Fixtures are a great way to mock data for responses to routes"
+            }).to.deep.equal({
+                    "name": "Using fixtures to represent data",
+                    "email": "hello@cypress.io",
+                    "body": "Fixtures are a great way to mock data for responses to routes"
+                }
+            )
+
+       })
+    })
+
+    it.only(' Explict Assertion - example 4 ',()=>{
+
+        let obj = {
+            name : "Sami",
+            id :123
+        }
+        expect(obj).to.contain({name:'Sami'})
+
+//let, const, var
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        cy.get('[class="oxd-text oxd-text--h5 orangehrm-login-title"]').then(($var)=>{
+            let actName=$var.text()
+            const expName="Login"
+            let classAttributeValue = $var.attr("class");
+            $var.removeAttr("class")
+            cy.log("classAttributeValue-->"+classAttributeValue)
+            //BDD Style - explicit assertion
+            expect(actName).to.eq(expName)
+            expect(actName).to.not.eq("Logins")
+
+            //TDD Style - explicit assertion
+
+            assert.equal(actName,expName)
+            assert.notEqual(actName,"Logins")
+
+        })
+
+
     })
 
 
