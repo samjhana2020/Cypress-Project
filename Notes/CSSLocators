@@ -1,0 +1,40 @@
+CSS Locators :
+
+<h5 class="oxd-text oxd-text--h5 orangehrm-login-title" 
+data-v-7588b244="" data-v-30b9e6c4="">Login</h5>
+
+<div class="oxd-toast-container oxd-toast-container--bottom" 
+id="oxd-toaster_1"></div>
+
+TagName : h5
+Attribute :  class="oxd-text oxd-text--h5 orangehrm-login-title"
+AttributeName : class
+AttributeValue : oxd-text oxd-text--h5 orangehrm-login-title
+property :
+text : Login
+
+CSS Selector :
+> id -> #oxd-toaster_1
+> className -> .oxd-toast-container or oxd-toast-container.oxd-toast-container--bottom
+
+Basic Syntax : 
+syntax : [attributeName="value"]
+[id="oxd-toaster_1"] 
+[class="oxd-text oxd-text--h5 orangehrm-login-title"]
+
+> tag and id combination 
+div#oxd-toaster_1
+> tag and class combination 
+div.oxd-toast-container
+
+> tag and attribute
+div[id="oxd-toaster_1"] 
+
+> tag class and attribute combination
+div.oxd-toast-container[id="oxd-toaster_1"] 
+
+> By using combination of parent and child tag 
+a>span[class="oxd-text oxd-text--span oxd-main-menu-item--name"]
+
+
+
